@@ -44,3 +44,28 @@
 
   <p id="resultadoDilucion"></p>
 </div>
+<div class="card">
+  <h2>Gramos ↔ Moles</h2>
+
+  <label>Masa (g)</label>
+  <input type="number" id="masa">
+
+  <label>Masa molar (g/mol)</label>
+  <input type="number" id="masaMolar">
+
+  <button onclick="calcularMoles()">Calcular moles</button>
+  <button onclick="calcularGramos()">Calcular gramos</button>
+
+  <p id="resultadoConversion"></p>
+</div>
+
+<div class="card">
+  <h2>pH (Ácido fuerte)</h2>
+
+  <label>Concentración [H⁺] (mol/L)</label>
+  <input type="number" id="h">
+
+  <button onclick="calcularPH()">Calcular pH</button>
+
+  <p id="resultadoPH"></p>
+</div>
