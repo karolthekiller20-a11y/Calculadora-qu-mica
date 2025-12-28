@@ -23,6 +23,49 @@ function calcularDilucion() {
       "⚠️ Ingresa valores válidos";
     return;
   }
+function calcularMoles() {
+  const masa = parseFloat(document.getElementById("masa").value);
+  const masaMolar = parseFloat(document.getElementById("masaMolar").value);
+
+  if (isNaN(masa) || isNaN(masaMolar) || masaMolar <= 0) {
+    document.getElementById("resultadoConversion").textContent =
+      "⚠️ Valores inválidos";
+    return;
+  }
+
+  const moles = masa / masaMolar;
+  document.getElementById("resultadoConversion").textContent =
+    `n = ${moles.toFixed(4)} mol`;
+}
+
+function calcularGramos() {
+  const masaMolar = parseFloat(document.getElementById("masaMolar").value);
+  const moles = parseFloat(document.getElementById("masa").value);
+
+  if (isNaN(moles) || isNaN(masaMolar) || masaMolar <= 0) {
+    document.getElementById("resultadoConversion").textContent =
+      "⚠️ Valores inválidos";
+    return;
+  }
+
+  const gramos = moles * masaMolar;
+  document.getElementById("resultadoConversion").textContent =
+    `m = ${gramos.toFixed(3)} g`;
+}
+
+function calcularPH() {
+  const h = parseFloat(document.getElementById("h").value);
+
+  if (isNaN(h) || h <= 0) {
+    document.getElementById("resultadoPH").textContent =
+      "⚠️ Ingresa [H⁺] válida";
+    return;
+  }
+
+  const ph = -Math.log10(h);
+  document.getElementById("resultadoPH").textContent =
+    `pH = ${ph.toFixed(2)}`;
+}
 
   const v2 = (m1 * v1) / m2;
 
