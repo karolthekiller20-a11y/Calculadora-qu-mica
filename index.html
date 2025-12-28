@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Química</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🧪 Calculadora Química</h1>
+
+    <div class="card">
+      <h2>Molaridad</h2>
+
+      <label>Moles (mol)</label>
+      <input type="number" id="moles">
+
+      <label>Volumen (L)</label>
+      <input type="number" id="volumen">
+
+      <button onclick="calcularMolaridad()">Calcular</button>
+
+      <p id="resultadoMolaridad"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<div class="card">
+  <h2>Diluciones</h2>
+
+  <label>M₁ (concentración inicial, mol/L)</label>
+  <input type="number" id="m1">
+
+  <label>V₁ (volumen inicial, L)</label>
+  <input type="number" id="v1">
+
+  <label>M₂ (concentración final, mol/L)</label>
+  <input type="number" id="m2">
+
+  <button onclick="calcularDilucion()">Calcular V₂</button>
+
+  <p id="resultadoDilucion"></p>
+</div>
